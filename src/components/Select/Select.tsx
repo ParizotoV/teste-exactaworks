@@ -1,9 +1,21 @@
 import { MenuItem } from '@mui/material'
 import React, { useState } from 'react'
 
-import { InputLabel, Select as SelectStyled, SelectProps, Wrapper } from '.'
+import {
+  InputError,
+  InputLabel,
+  Select as SelectStyled,
+  SelectProps,
+  Wrapper
+} from '.'
 
-const Select = ({ label, error, options, ...root }: SelectProps) => {
+const Select = ({
+  label,
+  error,
+  options,
+  messageError,
+  ...root
+}: SelectProps) => {
   const [isMyInputFocused, setIsMyInputFocused] = useState(false)
 
   const className = error
@@ -19,15 +31,21 @@ const Select = ({ label, error, options, ...root }: SelectProps) => {
       </InputLabel>
       <SelectStyled
         {...root}
+        error={error}
         onBlur={() => setIsMyInputFocused(false)}
         onFocus={() => setIsMyInputFocused(true)}
       >
         {options.map(({ label, value }, index) => (
-          <MenuItem key={index} value={value}>
+          <MenuItem data-cy={`form-select-${value}`} key={index} value={value}>
             {label}
           </MenuItem>
         ))}
       </SelectStyled>
+      {error && (
+        <InputError className={className}>
+          {messageError?.toLocaleUpperCase()}
+        </InputError>
+      )}
     </Wrapper>
   )
 }

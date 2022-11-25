@@ -7,7 +7,7 @@ export interface OptionsParams {
 
 interface ExtendSelectProps {
   error?: boolean
-  errorMessage?: string
+  messageError?: string | null
   label?: string
   options: OptionsParams[]
 }

@@ -28,14 +28,18 @@ export const Select = styled(MUISelect)(({ theme, error }) => ({
     },
     '&.Mui-focused fieldset': {
       marginTop: '1px',
-      border: `2px solid ${theme.palette.primary.main}`,
+      border: error
+        ? `2px solid ${theme.palette.error.main}`
+        : `2px solid ${theme.palette.primary.main}`,
       borderRadius: 0
     },
     '& .MuiInputBase-input': {
+      color: error ? theme.palette.error.main : theme.palette.grey[900],
       borderRadius: 0,
       position: 'relative',
-      backgroundColor: '#fcfcfb',
-      border: `2px solid ${theme.palette.grey[900]}`,
+      border: error
+        ? `2px solid ${theme.palette.error.main}`
+        : `2px solid ${theme.palette.grey[900]}`,
       fontSize: 16,
       padding: '10px 12px',
       '&:focus': {
