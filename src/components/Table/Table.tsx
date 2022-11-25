@@ -42,12 +42,14 @@ const DynamicTable: React.FC<TableProps> = ({ columns, rows }) => {
   }
 
   return (
-    <TableContainer>
+    <TableContainer data-cy="table">
       <Table>
         <TableHead>
           <TableRow>
             {dataTable.columns.map((column, index) => (
-              <TableCell key={index}>{column.label}</TableCell>
+              <TableCell key={index} style={{ minWidth: column.minWidth }}>
+                {column.label}
+              </TableCell>
             ))}
           </TableRow>
         </TableHead>

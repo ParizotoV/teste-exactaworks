@@ -19,14 +19,16 @@ export const Table = styled(TableMui)(() => ({
 export const TableCell = styled(TableCellMui)(({ theme }) => ({
   cursor: 'pointer',
   [`&.${tableCellClasses.head}`]: {
+    background: '#F8F8F8',
     fontWeight: '600',
-    padding: '8px 4px 7px'
+    padding: '12px 16px 12px 16px',
+    color: theme.palette.grey[600]
   },
   [`&.${tableCellClasses.body}`]: {
     border: 0,
     boxShadow: 0,
-    fontSize: 14,
-    padding: '8px 4px 7px'
+    fontSize: 15,
+    padding: '12px 16px 12px 16px'
   }
 }))
 

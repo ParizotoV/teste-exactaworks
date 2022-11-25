@@ -5,6 +5,8 @@ export interface TableProps {
 
 interface Column {
   label: string
+  id: string
+  minWidth: string
 }
 
 export interface DataTableStates {
