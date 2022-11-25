@@ -3,7 +3,7 @@ import axios, { AxiosError } from 'axios'
 import { getAPIClient } from './axios'
 
 interface DataServiceProps {
-  type?: 'POST' | 'GET' | 'DELETE' | 'PATCH'
+  type?: 'POST' | 'GET' | 'DELETE' | 'PUT'
   data?: any
   url: string
 }
