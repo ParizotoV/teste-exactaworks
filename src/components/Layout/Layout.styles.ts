@@ -15,6 +15,10 @@ export const Header = styled('header')(({ theme }) => ({
   height: '48px',
   width: '100%',
 
+  [`@media (max-width: ${theme.breakpoints.values.sm}px)`]: {
+    justifyContent: 'center'
+  },
+
   background: '#212121',
   color: '#fff',
   padding: '16px',
@@ -48,5 +52,7 @@ export const Image = styled('img')(() => ({}))
 export const Container = styled('div')(() => ({
   display: 'flex',
   justifyContent: 'center',
-  height: '100%'
+  height: '100%',
+  background: '#F9FAFF',
+  width: 'calc(100% + 32px)'
 }))

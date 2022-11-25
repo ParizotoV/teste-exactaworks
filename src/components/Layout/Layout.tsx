@@ -16,15 +16,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <Wrapper>
       <Header>
         <Box display="flex" alignItems="center">
-          Como funciona
+          COMO FUNCIONA
           <CircleDivider />
-          Privacidade
+          PRIVACIDADE
           <CircleDivider />
-          Ajuda
+          AJUDA
         </Box>
       </Header>
       <SubHeader>
-        <Box display="flex" width="72%">
+        <Box
+          display="flex"
+          width="100%"
+          alignItems="center"
+          justifyContent="center"
+        >
           <Image src="/imgs/icon.png" alt="icon" width="70px" height="70px" />
           <Box marginLeft="12px">
             <Typography fontSize="10pt" fontWeight="bold" color="#5080d5">
