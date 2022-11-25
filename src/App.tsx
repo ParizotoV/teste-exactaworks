@@ -21,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/customers" element={<List />} />
           <Route path="/customers/add" element={<Form />} />
+          <Route path="/customers/edit/:uuid" element={<Form />} />
         </Routes>
       </Layout>
     </ThemeProvider>
