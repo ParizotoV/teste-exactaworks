@@ -7,3 +7,8 @@ export interface ResponseCustomer {
   issuing_body: string
   id: string
 }
+
+export interface CreateRowsActionsParams {
+  handleDelete: (uuid: string) => void
+  handleEdit: (uuid: string) => void
+}
