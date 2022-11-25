@@ -31,7 +31,6 @@ export const Input = styled(InputBase)<InputProps>(
       color: error ? theme.palette.error.main : theme.palette.grey[900],
       borderRadius: 0,
       position: 'relative',
-      backgroundColor: '#fcfcfb',
       border: `2px solid ${
         error ? theme.palette.error.main : theme.palette.grey[900]
       }`,
